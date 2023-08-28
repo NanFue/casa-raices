@@ -1,0 +1,26 @@
+.seccion{
+    background-color: #7C6991;
+    color: white;
+}/* Example CSS file */
+
+.outer-container {
+    background-color: rgba(255, 255, 255, 0.5); /* White color with 50% opacity */
+    padding: 20px; /* Adjust padding as needed */
+}
+
+.inner-container {
+    border: 1px solid black; /* Black border */
+    background-color: rgba(255, 255, 255, 0.5); /* White color with 50% opacity */
+    padding: 10px; /* Adjust padding as needed */
+}
+
+
+
+/*.inner-container {*/
+/*    background-color: rgba(255, 255, 255, 0.7);*/
+/*    border: 1px solid black;*/
+/*}*/
+
+uk-h1{
+    color:black ;
+}

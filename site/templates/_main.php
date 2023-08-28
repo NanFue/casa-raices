@@ -1,0 +1,126 @@
+<?php namespace ProcessWire;
+
+// Optional main output file, called after rendering page’s template file. 
+// This is defined by $config->appendTemplateFile in /site/config.php, and
+// is typically used to define and output markup common among most pages.
+// 	
+// When the Markup Regions feature is used, template files can prepend, append,
+// replace or delete any element defined here that has an "id" attribute. 
+// https://processwire.com/docs/front-end/output/markup-regions/
+	
+/** @var Page $page */
+/** @var Pages $pages */
+/** @var Config $config */
+	
+$home = $pages->get('/'); /** @var HomePage $home */
+
+?><!DOCTYPE html>
+<html lang="en">
+	<head id="html-head">
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+		<title><?php echo $page->title; ?></title>
+		<link rel="stylesheet" type="text/css" href="<?php echo $config->urls->templates; ?>styles/main.css" />
+		<script src="<?php echo $config->urls->templates; ?>scripts/main.js"></script>
+
+		<!-- UIkit CSS -->
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.16.24/dist/css/uikit.min.css" />
+
+		<!-- UIkit JS -->
+		<script src="https://cdn.jsdelivr.net/npm/uikit@3.16.24/dist/js/uikit.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/uikit@3.16.24/dist/js/uikit-icons.min.js"></script>
+
+		<script src="uikit/dist/js/uikit-icons.min.js"></script>
+
+		<!-- Less -->
+		<script src="less.js" type="text/javascript"></script>
+		<link rel="stylesheet/less" type="text/css" href="site/templates/styles/styles.less" />
+
+
+
+	</head>
+	<body id="html-body">
+
+	<div id="topnav" class="menu-container uk-background-default" uk-sticky>
+		<div class="uk-container">
+			<div class="uk-visible@m">
+				<div class="uk-width-1-1">
+					<nav class="uk-navbar-container" uk-navbar>
+						<div class="uk-navbar-left">
+							<ul class="uk-navbar-nav">
+								<?php foreach ($home->children as $servicio): ?>
+									<li class="<?= $servicio == $page ? 'uk-active' : '' ?>">
+										<a href="<?= $servicio->url ?>">
+											<?= $servicio->title ?>
+										</a>
+									</li>
+								<?php endforeach ?>
+							</ul>
+						</div>
+					</nav>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+
+
+<!--		<p id="topnav">-->
+<!--			--><?php //echo $home->and($home->children)->implode(" / ", "<a href='{url}'>{title}</a>"); ?>
+<!--		</p>-->
+
+		
+<!--		<h1 id="headline">-->
+<!--			--><?php //if($page->parents->count()): // breadcrumbs ?>
+<!--				--><?php //echo $page->parents->implode(" &gt; ", "<a href='{url}'>{title}</a>"); ?><!-- &gt;-->
+<!--			--><?php //endif; ?>
+<!--			--><?php //echo $page->title; // headline ?>
+<!--		</h1>-->
+		
+		<div id="content">
+			Default content
+		</div>
+	
+
+		<hr>
+		<section id="footer" class="uk-container uk-margin-large">
+			<div class="uk-container uk-child-width-1-4@m" uk-grid>
+				<div class="uk-text-center">
+					<span uk-icon="icon: home; ratio: 2"></span>
+					<p>VALPARAISO #6 , MEXICO, 07020</p>
+				</div>
+				<div class="uk-text-center">
+					<span uk-icon="icon: receiver; ratio: 2"></span>
+					<p>Tel: 998-874-7645</p>
+				</div>
+				<div class="uk-text-center">
+					<span uk-icon="icon: mail;ratio: 2"></span>
+					<p>dra.gil@casaraices.com.mx</p>
+				</div>
+				<div class="uk-text-center">
+				<span uk-icon="icon:clock; ratio: 2"></span>
+				<p>HORARIO DE ATENCIÓN :
+					Lun a Dom
+					09 am - 06 pm</p>
+				</div>
+			</div>
+
+			<div class="uk-container uk-child-width-1-2@m uk-flex-middle" uk-grid>
+				<div>
+					<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d468.2330212962717!2d-99.12314125643802!3d19.485074125220788!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d1f9086913d741%3A0x4431335a8ec0076d!2sCasa%20Ra%C3%ADces!5e0!3m2!1ses-419!2sus!4v1692922665806!5m2!1ses-419!2sus" class="uk-width-1-1@m uk-height-medium" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+				</div>
+
+				<div class="">
+					<h3>Contáctenos</h3>
+					<?php $form = $modules->get('FormBuilder')->render('contact');
+
+					if ($form) {
+					echo $form->render();
+					}
+					?>
+				</div>
+			</div>
+		</section>
+	
+	</body>
+</html>

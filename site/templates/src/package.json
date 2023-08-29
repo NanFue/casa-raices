@@ -1,0 +1,19 @@
+{
+  "name": "src",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "less": "^4.2.0",
+    "vite": "^4.4.5"
+  },
+  "dependencies": {
+    "uikit": "^3.16.26",
+    "vite-plugin-live-reload": "^3.0.2"
+  }
+}

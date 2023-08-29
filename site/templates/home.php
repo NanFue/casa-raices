@@ -15,20 +15,31 @@
         </div>
 	</section>
 
-	<section class="uk-flex uk-flex-center uk-section uk-container uk-width-1-1@m seccion">
+	<section class="uk-section uk-width-1-1@m seccion">
 		<?php $items = $page->seccion; ?>
-		<?php foreach ($items as $item): ?>
-			<div class="uk-container uk-child-width-1-2@m uk-flex uk-flex-middle" uk-grid>
-				<div class="">
-					<p class=""><?= $item->text; ?></p>
-					<a class="uk-button uk-button-default" href="#">Conoce Más</a>
-				</div>
-				<div class="">
-					<img class="uk-border-rounded" src="<?= $item->image->url ?>" alt="Hero Image">
-				</div>
-			</div>
-		<?php endforeach; ?>
+        <div class="uk-container">
+            <?php foreach ($items as $item): ?>
+                <div class="uk-child-width-1-2@m uk-flex uk-flex-middle" uk-grid>
+                    <div class="">
+                        <p class=""><?= $item->text; ?></p>
+                        <a class="uk-button uk-button-default" href="#">Conoce Más</a>
+                    </div>
+                    <div class="">
+                        <img class="uk-border-rounded" src="<?= $item->image->url ?>" alt="Hero Image">
+                    </div>
+                </div>
+            <?php endforeach; ?>
+        </div>
 	</section>
+
+    <!--<section>
+        <div class="uk-container">
+            <div uk-grid="">
+                <div></div>
+                <div></div>
+            </div>
+        </div>
+    </section>-->
 
 	<section class="uk-section uk-container">
 		<div class="uk-margin-large">

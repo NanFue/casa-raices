@@ -7915,6 +7915,7 @@ iframe[data-uk-cover] {
   color: #333333;
   /* 2 */
   text-decoration: none;
+  width: 150px;
 }
 /* 3 */
 :where(.uk-logo) {
@@ -11907,14 +11908,20 @@ iframe[data-uk-cover] {
     page-break-after: avoid;
   }
 }
-.uk-navbar {
-  background: linear-gradient(to bottom, #000000, rgba(0, 0, 0, 0));
+.hook-logo {
+  width: 150px;
+}
+/*.uk-navbar {
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
   padding-left: 100px;
   padding-right: 100px;
   padding-top: 15px;
   padding-bottom: 15px;
-}
-.uk-navbar li > a {
-  padding: 0 15px;
-  color: white;
-}
+  li > a{
+    padding: 0 15px;
+    color: white;
+  }
+}*/
+/*.hook-navbar{
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+}*/

@@ -6,13 +6,13 @@
 <region id="content">
 
 	<section class=" uk-width-1-1@m">
-		<div class="uk-height-large uk-background-cover  uk-flex" style="background-image: url('<?= $page->image->url ?>');" uk-parallax="bgy: -200">
-			<div class="outer-container uk-padding uk-flex ">
-				<div class="inner-container uk-padding uk-width-1-1 uk-flex uk-flex-middle uk-text-center uk-position-center">
-					<h1 class="logo"><?php echo $page->title; ?></h1>
-				</div>
-			</div>
-		</div>
+		<div class="uk-height-large uk-position-relative uk-background-cover uk-flex" style="background-image: url('<?= $page->image->url ?>');" uk-parallax="bgy: -200">
+            <div class="inner-container uk-padding uk-text-center uk-position-center">
+                <div class="uk-background-default uk-padding-large">
+                    <h1 class="logo"><?php echo $page->title; ?></h1>
+                </div>
+            </div>
+        </div>
 	</section>
 
 	<section class="uk-flex uk-flex-center uk-section uk-container uk-width-1-1@m seccion">

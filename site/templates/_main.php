@@ -1,5 +1,24 @@
 <?php namespace ProcessWire;
 
+\Less_Autoloader::register();
+
+//Compile UIKit
+
+$less_files = array();
+$uikitFile = $config->paths->templates . 'css/uikit-custom.less';
+
+$less_files = array(
+	$uikitFile => $config->path->templates . 'css/uikit-custom.css'
+);
+
+$uikitOptions = array(
+	'cache_dir'    => $config->paths->assets . 'cache/less/',
+	'output'       => $config->paths->templates . 'css/build.css',
+	'relativeUrls' => true
+);
+
+$uikitCustomFilename = \Less_Cache::Get($less_files, $uikitOptions);
+
 // Optional main output file, called after rendering page’s template file. 
 // This is defined by $config->appendTemplateFile in /site/config.php, and
 // is typically used to define and output markup common among most pages.
@@ -22,63 +41,38 @@ $home = $pages->get('/'); /** @var HomePage $home */
 		<link rel="stylesheet" type="text/css" href="<?php echo $config->urls->templates; ?>styles/main.css" />
 		<script src="<?php echo $config->urls->templates; ?>scripts/main.js"></script>
 
-		<!-- UIkit CSS -->
-		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.16.24/dist/css/uikit.min.css" />
-
-		<!-- UIkit JS -->
-		<script src="https://cdn.jsdelivr.net/npm/uikit@3.16.24/dist/js/uikit.min.js"></script>
-		<script src="https://cdn.jsdelivr.net/npm/uikit@3.16.24/dist/js/uikit-icons.min.js"></script>
-
-		<script src="uikit/dist/js/uikit-icons.min.js"></script>
-
-		<!-- Less -->
-		<script src="less.js" type="text/javascript"></script>
-		<link rel="stylesheet/less" type="text/css" href="site/templates/styles/styles.less" />
-
+		<link rel="stylesheet" href="<?= $urls->templates ?>css/build.css" class="href">
+		<link rel="stylesheet" href="<?= $urls->templates ?>styles/main.css" class="href">
+		<script src="<?= $urls->templates ?>js/uikit.min.js"></script>
+		<script src="<?= $urls->templates ?>js/uikit-icons.min.js"></script>
 
 
 	</head>
+
 	<body id="html-body">
 
-	<div id="topnav" class="menu-container uk-background-default" uk-sticky>
-		<div class="uk-container">
-			<div class="uk-visible@m">
-				<div class="uk-width-1-1">
-					<nav class="uk-navbar-container" uk-navbar>
-						<div class="uk-navbar-left">
-							<ul class="uk-navbar-nav">
-								<?php foreach ($home->children as $servicio): ?>
-									<li class="<?= $servicio == $page ? 'uk-active' : '' ?>">
-										<a href="<?= $servicio->url ?>">
-											<?= $servicio->title ?>
-										</a>
-									</li>
-								<?php endforeach ?>
-							</ul>
-						</div>
-					</nav>
-				</div>
+	<div id="topnav" class=" " uk-sticky>
+		<nav class="" uk-navbar>
+			<div class="uk-navbar-left">
+				<img src="site/templates/img/logo.png" alt="">
 			</div>
-		</div>
+
+			<div class="uk-navbar-right">
+				<ul class="uk-navbar-nav uk-subnav-divider">
+					<?php foreach ($home->children as $servicio): ?>
+						<li class="<?= $servicio == $page ? 'uk-active' : '' ?>">
+							<a href="<?= $servicio->url ?>">
+								<?= $servicio->title ?>
+							</a>
+						</li>
+					<?php endforeach ?>
+				</ul>
+			</div>
+		</nav>
 	</div>
 
-
-
-
-<!--		<p id="topnav">-->
-<!--			--><?php //echo $home->and($home->children)->implode(" / ", "<a href='{url}'>{title}</a>"); ?>
-<!--		</p>-->
-
-		
-<!--		<h1 id="headline">-->
-<!--			--><?php //if($page->parents->count()): // breadcrumbs ?>
-<!--				--><?php //echo $page->parents->implode(" &gt; ", "<a href='{url}'>{title}</a>"); ?><!-- &gt;-->
-<!--			--><?php //endif; ?>
-<!--			--><?php //echo $page->title; // headline ?>
-<!--		</h1>-->
-		
 		<div id="content">
-			Default content
+
 		</div>
 	
 

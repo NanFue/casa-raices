@@ -15,7 +15,8 @@
   ],
   "require": {
     "php": ">=5.5",
-    "ext-gd": "*"
+    "ext-gd": "*",
+    "wikimedia/less.php": "^4.1"
   },
   "autoload": {
     "files": [ "wire/core/ProcessWire.php" ]

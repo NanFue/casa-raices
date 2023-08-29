@@ -41,31 +41,35 @@
         </div>
     </section>-->
 
-	<section class="uk-section uk-container">
-		<div class="uk-margin-large">
-			<div class="" uk-grid>
-			<?php $items = $page->paquetes; ?>
-			<?php foreach ($items as $item): ?>
-				<div class="uk-text-center uk-width-1-3@m ">
-					<div class="uk-card uk-card-default uk-card-body"><?php echo $item->text ?>
-					</div>
-				</div>
-			<?php endforeach; ?>
-			</div>
-		</div>
+	<section class="uk-section">
+        <div class="uk-container">
 
-		<?php $images = $page->images; ?>
-		<div class="uk-container uk-margin-large">
-			<div class="" uk-grid>
-				<?php foreach ($images as $image): ?>
-					<div class="uk-text-center uk-width-1-2@m uk-box-shadow-bottom">
-						<div class="uk-card uk-card-default uk-card-body">
-							<img class="uk-border-rounded" src="<?= $image->url ?>" alt="Hero Image" loading="lazy">
-						</div>
-					</div>
-				<?php endforeach; ?>
-			</div>
-		</div>
+            <div class=" uk-margin-large">
+                <div class="" uk-grid>
+                    <?php $items = $page->paquetes; ?>
+                    <?php foreach ($items as $item): ?>
+                        <div class="uk-text-center uk-width-1-3@m ">
+                            <div class="uk-card uk-card-default uk-card-body"><?php echo $item->text ?>
+                            </div>
+                        </div>
+                    <?php endforeach; ?>
+                </div>
+            </div>
+
+            <?php $images = $page->images; ?>
+            <div class=" uk-margin-large">
+                <div class="" uk-grid>
+                    <?php foreach ($images as $image): ?>
+                        <div class="uk-text-center uk-width-1-2@m uk-box-shadow-bottom">
+                            <div class="uk-card uk-card-default uk-card-body">
+                                <img class="uk-border-rounded" src="<?= $image->url ?>" alt="Hero Image" loading="lazy">
+                            </div>
+                        </div>
+                    <?php endforeach; ?>
+                </div>
+            </div>
+
+        </div>
 	</section>
 
 </region>

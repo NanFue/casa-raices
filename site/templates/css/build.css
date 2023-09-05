@@ -8,7 +8,7 @@
  */
 html {
   /* 1 */
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-family: 'Montserrat', sans-serif, 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   font-size: 16px;
   font-weight: normal;
   line-height: 1.5;
@@ -34,6 +34,7 @@ a,
   color: #1e87f0;
   text-decoration: none;
   cursor: pointer;
+  color: black;
 }
 a:hover,
 .uk-link:hover,
@@ -218,8 +219,8 @@ h6,
 .uk-heading-xlarge,
 .uk-heading-2xlarge {
   margin: 0 0 20px 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  font-weight: normal;
+  font-family: 'Abril Fatface';
+  font-weight: 800;
   color: #333333;
   text-transform: none;
 }
@@ -3750,6 +3751,11 @@ select.uk-form-width-xsmall {
   background: #222222;
   /* 3 */
   overflow-y: auto;
+  background: #7C6991;
+}
+.uk-offcanvas-bar .uk-nav-default > li > a {
+  color: white;
+  opacity: 100%;
 }
 /* Phone landscape and bigger */
 @media (min-width: 640px) {
@@ -4985,7 +4991,7 @@ ul.uk-nav-sub {
   min-height: 80px;
   /* 4 */
   font-size: 16px;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-family: 'Montserrat', sans-serif, 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   /* 5 */
   text-decoration: none;
 }
@@ -5066,6 +5072,9 @@ ul.uk-nav-sub {
 }
 /* Style modifiers
  ========================================================================== */
+.uk-navbar-transparent {
+  background: linear-gradient(to bottom, #000000, rgba(0, 0, 0, 0));
+}
 /* Dropdown
  ========================================================================== */
 /*
@@ -7911,11 +7920,10 @@ iframe[data-uk-cover] {
 .uk-logo {
   /* 1 */
   font-size: 1.5rem;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-family: 'Montserrat', sans-serif, 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   color: #333333;
   /* 2 */
   text-decoration: none;
-  width: 150px;
 }
 /* 3 */
 :where(.uk-logo) {
@@ -11200,7 +11208,7 @@ iframe[data-uk-cover] {
 .uk-card-secondary > :not([class*='uk-card-media']) .uk-navbar-nav > li > a,
 .uk-overlay-primary .uk-navbar-nav > li > a,
 .uk-offcanvas-bar .uk-navbar-nav > li > a {
-  color: rgba(255, 255, 255, 0.5);
+  color: #ffffff;
 }
 .uk-light .uk-navbar-nav > li:hover > a,
 .uk-light .uk-navbar-nav > li > a[aria-expanded="true"],
@@ -11908,20 +11916,54 @@ iframe[data-uk-cover] {
     page-break-after: avoid;
   }
 }
-.hook-logo {
-  width: 150px;
+.texto {
+  color: white;
 }
-/*.uk-navbar {
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
-  padding-left: 100px;
-  padding-right: 100px;
-  padding-top: 15px;
-  padding-bottom: 15px;
-  li > a{
-    padding: 0 15px;
-    color: white;
+.logo-image {
+  position: relative;
+  width: 90px;
+  height: 113px;
+  top: -10px;
+}
+.uk-logo {
+  position: relative;
+  max-width: 300px;
+  top: 10px;
+}
+@media (max-width: 960px) {
+  .uk-logo {
+    top: 0px;
   }
-}*/
+}
+.hook-navbar-transparent {
+  background: linear-gradient(to bottom, #000000, rgba(0, 0, 0, 0));
+}
+@media (min-width: 960px) {
+  .promos {
+    box-shadow: 0 8px 10px rgba(0, 0, 0, 0.3);
+  }
+}
+/*.hook-uk-navbar.cls-active {
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+    padding-left: 100px;
+    padding-right: 100px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+
+    li > a {
+      padding: 0 15px;
+      color: white;
+    }
+  }*/
 /*.hook-navbar{
   background: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+}*/
+/*
+.navbar-menu.uk-sticky.uk-background-default{
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+  color:white;
+}
+
+.uk-navbar-nav > li > a{
+  color: white;
 }*/

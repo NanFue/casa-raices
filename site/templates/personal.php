@@ -2,10 +2,15 @@
 
 <region id="content">
 
-        <section class=" uk-width-1-1@m">
-            <div class="uk-height-large uk-background-cover uk-light uk-flex" style="background-image: url('<?= $page->image->url ?>');" uk-parallax="bgy: -200">
+    <section class=" uk-width-1-1@m">
+        <div class="uk-height-large uk-position-relative uk-background-cover uk-flex" style="background-image: url('<?= $page->image->url ?>');" uk-parallax="bgy: -200">
+            <div class="inner-container uk-padding uk-text-center uk-position-center">
+                <div class="uk-background-default uk-padding-small">
+                    <h1 class="logo">Casa Raíces</h1>
+                </div>
             </div>
-        </section>
+        </div>
+    </section>
 
 
     <section class="uk-container uk-container-small uk-margin-large">

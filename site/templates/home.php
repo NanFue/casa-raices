@@ -8,8 +8,8 @@
 	<section class=" uk-width-1-1@m">
 		<div class="uk-height-large uk-position-relative uk-background-cover uk-flex" style="background-image: url('<?= $page->image->url ?>');" uk-parallax="bgy: -200">
             <div class="inner-container uk-padding uk-text-center uk-position-center">
-                <div class="uk-background-default uk-padding-large">
-                    <h1 class="logo"><?php echo $page->title; ?></h1>
+                <div class="uk-background-default uk-padding-small">
+                    <h1 class="logo">Casa Raíces</h1>
                 </div>
             </div>
         </div>
@@ -18,6 +18,7 @@
 	<section class="uk-section uk-width-1-1@m seccion">
 		<?php $items = $page->seccion; ?>
         <div class="uk-container">
+            <h2 class="texto uk-margin-remove">SERVICIOS</h2>
             <?php foreach ($items as $item): ?>
                 <div class="uk-child-width-1-2@m uk-flex uk-flex-middle" uk-grid>
                     <div class="">
@@ -43,8 +44,8 @@
 
 	<section class="uk-section">
         <div class="uk-container">
-
             <div class=" uk-margin-large">
+                <h2 class="uk-margin-large-bottom">Paquetes</h2>
                 <div class="" uk-grid>
                     <?php $items = $page->paquetes; ?>
                     <?php foreach ($items as $item): ?>
@@ -60,15 +61,14 @@
             <div class=" uk-margin-large">
                 <div class="" uk-grid>
                     <?php foreach ($images as $image): ?>
-                        <div class="uk-text-center uk-width-1-2@m uk-box-shadow-bottom">
-                            <div class="uk-card uk-card-default uk-card-body">
+                        <div class="uk-text-center uk-width-1-2@m ">
+                            <div class="promos ">
                                 <img class="uk-border-rounded" src="<?= $image->url ?>" alt="Hero Image" loading="lazy">
                             </div>
                         </div>
                     <?php endforeach; ?>
                 </div>
             </div>
-
         </div>
 	</section>
 

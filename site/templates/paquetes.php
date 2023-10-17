@@ -4,7 +4,6 @@
 
 ?>
 
-
 <region id="content">
 
 	<section class=" uk-width-1-1@m">
@@ -19,11 +18,12 @@
 
 	<section>
 		<?php $images = $page->images; ?>
-		<div class=" uk-margin-large">
+		<div class="uk-container uk-margin-large">
+			<h2 class="uk-margin-large-top uk-margin-large-bottom">Paquetes y Promociones</h2>
 			<div class="" uk-grid>
 				<?php foreach ($images as $image): ?>
-					<div class="uk-text-center uk-width-1-2@m uk-box-shadow-bottom">
-						<div class="uk-card uk-card-default uk-card-body">
+					<div class="uk-text-center uk-width-1-2@m">
+						<div class="promos">
 							<img class="uk-border-rounded" src="<?= $image->url ?>" alt="Hero Image" loading="lazy">
 						</div>
 					</div>

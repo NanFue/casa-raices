@@ -19,17 +19,19 @@
             </div>
     </section>
 
-    <section class="uk-container uk-margin">
-        <div class="uk-child-width-1-2@m" uk-grid>
-            <?php foreach ($page->texto_2columnas as $item): ?>
-                <div>
-                    <?= $item->texto_izq ?>
-                </div>
+    <section class="promos2 uk-margin">
+        <div class="uk-container uk-container-small">
+                <div class="uk-child-width-1-2@m uk-margin-large-bottom uk-margin-large-top" uk-grid>
+                    <?php foreach ($page->texto_2columnas as $item): ?>
+                        <div class="">
+                            <?= $item->texto_izq ?>
+                        </div>
 
-                <div class="uk-padding">
-                    <?= $item->texto_der ?>
+                        <div class="">
+                            <?= $item->texto_der ?>
+                        </div>
+                    <?php endforeach; ?>
                 </div>
-            <?php endforeach; ?>
         </div>
     </section>
 
@@ -37,7 +39,7 @@
         <?= $page->texto_extra ; ?>
     </div>
 
-    <section class="uk-flex uk-flex-center">
+    <section class="uk-flex uk-flex-center uk-padding-small uk-margin-large-bottom">
         <div class=" uk-container-small uk-child-width-1-2@m uk-flex-middle" uk-grid>
             <?php foreach ($page->personal as $item): ?>
                 <div>

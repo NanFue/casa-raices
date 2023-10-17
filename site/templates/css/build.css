@@ -8,7 +8,7 @@
  */
 html {
   /* 1 */
-  font-family: 'Montserrat', sans-serif, 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-family: 'Geneva Regular', sans-serif, 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   font-size: 16px;
   font-weight: normal;
   line-height: 1.5;
@@ -1748,6 +1748,7 @@ select.uk-form-width-xsmall {
 .uk-form-stacked .uk-form-label {
   display: block;
   margin-bottom: 10px;
+  margin-top: 10px;
 }
 /*
  * Horizontal
@@ -1758,6 +1759,7 @@ select.uk-form-width-xsmall {
   .uk-form-horizontal .uk-form-label {
     display: block;
     margin-bottom: 10px;
+    margin-top: 10px;
   }
 }
 /* Tablet landscape and bigger */
@@ -4991,7 +4993,7 @@ ul.uk-nav-sub {
   min-height: 80px;
   /* 4 */
   font-size: 16px;
-  font-family: 'Montserrat', sans-serif, 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-family: 'Geneva Regular', sans-serif, 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   /* 5 */
   text-decoration: none;
 }
@@ -7920,7 +7922,7 @@ iframe[data-uk-cover] {
 .uk-logo {
   /* 1 */
   font-size: 1.5rem;
-  font-family: 'Montserrat', sans-serif, 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-family: 'Geneva Regular', sans-serif, 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   color: #333333;
   /* 2 */
   text-decoration: none;
@@ -11916,6 +11918,12 @@ iframe[data-uk-cover] {
     page-break-after: avoid;
   }
 }
+@font-face {
+  font-family: 'Geneva Regular';
+  src: url('css/uikit-custom.css/site/templates/fonts/Geneva Regular.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
 .texto {
   color: white;
 }
@@ -11938,10 +11946,17 @@ iframe[data-uk-cover] {
 .hook-navbar-transparent {
   background: linear-gradient(to bottom, #000000, rgba(0, 0, 0, 0));
 }
+.promos2 {
+  background-color: #c9c9c9;
+}
 @media (min-width: 960px) {
   .promos {
     box-shadow: 0 8px 10px rgba(0, 0, 0, 0.3);
   }
+}
+* + hr,
+* + .uk-hr {
+  margin-top: 0px;
 }
 /*.hook-uk-navbar.cls-active {
     background: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));

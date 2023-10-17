@@ -1,5 +1,12 @@
 @import "uikit/src/less/uikit.less";
 
+@font-face {
+  font-family: 'Geneva Regular';
+  src: url('site/templates/fonts/Geneva Regular.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
 @base-body-color: #515151;
 
 .texto{
@@ -7,7 +14,7 @@
 }
 
 
-@global-font-family: 'Montserrat', sans-serif, 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+@global-font-family: 'Geneva Regular', sans-serif, 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 //@base-heading-font-family: bc-liguria, sans-serif;
 @base-heading-font-family: 'Abril Fatface';
 @base-heading-font-weight: 800;
@@ -49,12 +56,23 @@
   color:black;
 }
 
+.promos2{
+  background-color: #c9c9c9;
+}
+
 @media (min-width:960px){
   .promos {
     box-shadow: 0 8px 10px rgba(0, 0, 0, 0.3);
   }
 }
 
+.hook-form-stacked-label(){
+  margin-top:10px;
+}
+
+* + hr, * + .uk-hr {
+  margin-top: 0px;
+}
   /*.hook-uk-navbar.cls-active {
     background: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
     padding-left: 100px;

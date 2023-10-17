@@ -23,7 +23,7 @@
                     <div>
                         <div class="">
                             <a href="<?= $galleryItem->url ?>" data-caption="<?= $galleryItem->title ?>">
-                                <img src="<?= $galleryItem->url ?>" alt="<?= $galleryItem->title ?>">
+                                <img src="<?= $galleryItem->url ?>" alt="<?= $galleryItem->title ?>" >
                             </a>
                         </div>
                     </div>

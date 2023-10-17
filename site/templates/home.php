@@ -56,14 +56,20 @@
                     <?php endforeach; ?>
                 </div>
             </div>
+        </div>
+    </section>
 
+    <section class="promos2 uk-section">
             <?php $images = $page->images; ?>
-            <div class=" uk-margin-large">
-                <div class="" uk-grid>
+            <div class="uk-container">
+                <h2 class="texto uk-margin-large-bottom">Promociones</h2>
+                <div class="uk-flex uk-flex-center" uk-grid uk-lightbox>
                     <?php foreach ($images as $image): ?>
-                        <div class="uk-text-center uk-width-1-2@m ">
+                        <div class="uk-text-center uk-width-1-3@m">
                             <div class="promos ">
-                                <img class="uk-border-rounded" src="<?= $image->url ?>" alt="Hero Image" loading="lazy">
+                                <a href="<?= $image->url ?>">
+                                    <img class="uk-border-rounded" src="<?= $image->url ?>" alt="Hero Image" loading="lazy">
+                                </a>
                             </div>
                         </div>
                     <?php endforeach; ?>

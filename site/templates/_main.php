@@ -39,6 +39,7 @@ $home = $pages->get('/'); /** @var HomePage $home */
     <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
     <title><?php echo $page->title; ?></title>
     <link rel="stylesheet" type="text/css" href="<?php echo $config->urls->templates; ?>styles/main.css"/>
+    <link rel="stylesheet" href="site/templates/css/uikit-custom.less">
     <script src="<?php echo $config->urls->templates; ?>scripts/main.js"></script>
 
     <link rel="stylesheet" href="<?= $urls->templates ?>css/build.css" class="href">
@@ -49,6 +50,7 @@ $home = $pages->get('/'); /** @var HomePage $home */
 <!--Fonts-->
     <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+
 
 
 
@@ -163,10 +165,10 @@ $home = $pages->get('/'); /** @var HomePage $home */
         </div>
     </div>
 
-    <div class="uk-container uk-child-width-1-2@m uk-flex-middle" uk-grid>
+    <div class="uk-container uk-child-width-1-2@m uk-flex-top" uk-grid>
         <div>
             <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d468.2330212962717!2d-99.12314125643802!3d19.485074125220788!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d1f9086913d741%3A0x4431335a8ec0076d!2sCasa%20Ra%C3%ADces!5e0!3m2!1ses-419!2sus!4v1692922665806!5m2!1ses-419!2sus"
-                    class="uk-width-1-1@m uk-height-medium" style="border:0;" allowfullscreen="" loading="lazy"
+                    class="uk-width-1-1@m uk-height-large" style="border:0;" allowfullscreen="" loading="lazy"
                     referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
 

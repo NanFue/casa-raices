@@ -62,7 +62,7 @@
     <section class="promos2 uk-section">
             <?php $images = $page->images; ?>
             <div class="uk-container">
-                <h2 class="texto uk-margin-large-bottom">Promocionestest</h2>
+                <h2 class="texto uk-margin-large-bottom">Promociones</h2>
                 <div class="uk-flex uk-flex-center" uk-grid uk-lightbox>
                     <?php foreach ($images as $image): ?>
                         <div class="uk-text-center uk-width-1-3@m">

@@ -1,0 +1,21 @@
+name: Deploy to production
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: contention/rsync-deployments@v2.0.0
+        with:
+          FLAGS: -azr
+          EXCLUDES: --include=.env --exclude-from=.gitignore --exclude=.github --exclude=.ddev --exclude=.git --exclude={'${{ github.workspace }}*.sh'}
+          USER: ${{ vars.PROD_USER }}
+          HOST: ${{ vars.PROD_HOST }}
+          LOCALPATH: /
+          REMOTEPATH: ${{ vars.PROD_PATH }}
+          DEPLOY_KEY: ${{ secrets.PROD_DEPLOY_KEY }}

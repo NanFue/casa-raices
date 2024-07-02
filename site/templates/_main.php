@@ -153,7 +153,7 @@ $home = $pages->get('/'); /** @var HomePage $home */
         </div>
         <div class="uk-text-center">
             <span uk-icon="icon: receiver; ratio: 2"></span>
-            <p><a href="tel:998-874-7645">Tel: 998-874-7645</a></p>
+            <p><a href="tel:998-874-7645">Tel:  55-1366-9087</a></p>
         </div>
         <div class="uk-text-center">
             <span uk-icon="icon: mail;ratio: 2"></span>
